@@ -1,0 +1,10 @@
+/* Page-specific styles */
+.lead { color: #696969; margin-top: .25rem; }
+.site-header h1 { font-size: 1.5rem; }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; }
+
+section { margin-bottom: 1.25rem; }
+
+@media (min-width: 700px) {
+  .site-header h1 { font-size: 2rem; }
+}
