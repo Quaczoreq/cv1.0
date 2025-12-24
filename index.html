@@ -9,29 +9,142 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1>Your Name</h1>
-      <p class="lead">Short tagline or role</p>
-    </div>
-  </header>
+      <div class="container">
+        <h1>Katarzyna Opozda</h1>
+          <p class="lead">Short tagline or role</p>
+      </div>
+    </header>
+<!--Main content-->
+  <main class="container" >
 
-  <main class="container">
-    <section>
-      <h2>Personal detais</h2>
-      <p>Brief bio or summary goes here. Replace with your content.</p>
+
+<!--section one-->
+    <section class="accordion">
+      <h2 class="accordion-header"><span class="triangle">▶</span> Education</h2>
+        <!-- S2 details-->
+        <div class="accordion-content">
+       
+        <!--nested acordion education-->
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span> Harvard University</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span> Limerick University</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span>Wigan and Leight College</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span> More Details</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+        </div>
     </section>
-       <section>
-      <h2>Edcuation</h2>
-      <p>Brief bio or summary goes here. Replace with your content.</p>
+  
+  <!--section two-->
+           
+    <section class="accordion">
+      <h2 class="accordion-header"><span class="triangle">▶</span> Employment</h2>
+        <!-- S2 details-->
+        <div class="accordion-content">
+       
+        <!--nested acordion education-->
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span> Microsoft Azure Adult Education</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span> EE/BT</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span> NWAS Training and Education Administrator</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span> More Details</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+        </div>
     </section>
-       <section>
-      <h2>work experience</h2>
-      <p>Brief bio or summary goes here. Replace with your content.</p>
+
+    <!--Contact Form Section-->
+    <section class="accordion">
+      <h2 class="accordion-header"><span class="triangle">▶</span> Contact / Personal details request Form</h2>
+      <div class="accordion-content">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="organization">Organisation / Job Application Position <span class="required">*</span></label>
+            <input type="text" id="organization" name="organization" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="contact">Contact Details <span class="required">*</span></label>
+            <input type="tel" id="contact" name="contact" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">© YEAR Your Name</div>
+    <div class="container">© 2025 Katarzyna Opozda</div>
   </footer>
+  
+  <script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const accordion = header.parentElement;
+        const content = header.nextElementSibling;
+        
+        accordion.classList.toggle('active');
+      });
+    });
+    
+    document.querySelectorAll('.nested-accordion-header').forEach(header => {
+      header.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const accordion = header.parentElement;
+        
+        accordion.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>
