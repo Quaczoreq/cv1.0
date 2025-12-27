@@ -51,6 +51,39 @@
           </div>
         </div>
     </section>
+
+    <section class="accordion">
+      <h2 class="accordion-header"><span class="triangle">▶</span> Courses</h2>
+        <!-- S2 details-->
+        <div class="accordion-content">
+       
+        <!--nested acordion courses-->
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span> Microsoft Azure</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span> AWS</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span>Principle in Team leadership</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+          <div class="nested-accordion">
+            <h3 class="nested-accordion-header"><span class="triangle">▶</span> PRINCE2 Fondamentals and Practitioner</h3>
+            <div class="nested-accordion-content">
+              <p>Additional education details, certifications, achievements, etc.</p>
+            </div>
+          </div>
+        </div>
+    </section>
   
   <!--section two-->
            
@@ -87,34 +120,34 @@
         </div>
     </section>
 
-    <!--Contact Form Section-->
+<!--Contact Form Section-->
     <section class="accordion">
       <h2 class="accordion-header"><span class="triangle">▶</span> Contact / Personal details request Form</h2>
       <div class="accordion-content">
         <form class="contact-form" id="contactForm">
           <div class="form-group">
             <label for="name">Name <span class="required">*</span></label>
-            <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" required>
           </div>
           
           <div class="form-group">
             <label for="organization">Organisation / Job Application Position <span class="required">*</span></label>
-            <input type="text" id="organization" name="organization" required>
+                <input type="text" id="organization" name="organization" required>
           </div>
           
           <div class="form-group">
-            <label for="contact">Contact Details <span class="required">*</span></label>
-            <input type="tel" id="contact" name="contact" required>
+            <label for="contact">Contact Details (optional)</label>
+              <input type="tel" id="contact" name="contact" required>
           </div>
           
           <div class="form-group">
             <label for="email">Email <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" required>
           </div>
           
           <div class="form-group">
             <label for="message">Message <span class="required">*</span></label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+              <textarea id="message" name="message" rows="4" required></textarea>
           </div>
           
           <button type="submit" class="submit-btn">Submit</button>
@@ -127,24 +160,10 @@
     <div class="container">© 2025 Katarzyna Opozda</div>
   </footer>
   
-  <script>
-    document.querySelectorAll('.accordion-header').forEach(header => {
-      header.addEventListener('click', () => {
-        const accordion = header.parentElement;
-        const content = header.nextElementSibling;
-        
-        accordion.classList.toggle('active');
-      });
-    });
-    
-    document.querySelectorAll('.nested-accordion-header').forEach(header => {
-      header.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const accordion = header.parentElement;
-        
-        accordion.classList.toggle('active');
-      });
-    });
-  </script>
+  <!-- EmailJS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
